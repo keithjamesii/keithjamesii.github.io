@@ -7,7 +7,7 @@ placeholder waiting on a decision or a link.
 """
 
 AMAZON = "https://www.amazon.com/dp/B0HHY83GPY"
-EMAIL  = "hello@example.com"            # EDIT-ME: the address you want public
+EMAIL  = "keithjamesiiwrites@gmail.com"
 
 LOCKUP = """
 <div class="lockup">
@@ -107,12 +107,10 @@ HOME = """
     <h2>Updates on the book and the adaptation</h2>
     <p class="dim">Occasional notes on the One Land and on the illustrated edition as art comes in.
       A few emails a year.</p>
-    <!-- EDIT-ME: paste your Substack / Mailchimp / Buttondown embed in place of this form.
-         GitHub Pages is static, so a plain <form> collects nothing on its own. -->
-    <form class="field-row" style="justify-content:center" onsubmit="return false">
-      <input type="email" placeholder="you@example.com" aria-label="Email address">
-      <button class="btn btn--solid" type="submit">Subscribe</button>
-    </form>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn btn--solid" href="https://keithjamesii.substack.com/subscribe">Join the list</a>
+    </div>
+    <p class="substack__alt">Free, and you can leave whenever you like.</p>
   </div>
 </section>
 """
@@ -449,8 +447,7 @@ CONTACT = """
     <p class="lede">Rights inquiries, interviews, school and library visits, and illustration
       collaborations all reach the same inbox.</p>
     <p><a class="btn btn--solid" href="mailto:EMAIL_HERE">EMAIL_HERE</a></p>
-    <!-- EDIT-ME: replace EMAIL_HERE in pages.py with the address you want public.
-         A dedicated address is worth setting up rather than a personal one. -->
+
   </div>
 </section>
 

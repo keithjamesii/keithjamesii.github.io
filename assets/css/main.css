@@ -338,3 +338,11 @@ input:focus, textarea:focus { outline: none; border-color: var(--brass); }
   color: var(--bone); margin-bottom: 0.25em;
 }
 .termlist p { font-size: 0.97rem; color: var(--bone-dim); margin: 0; }
+
+/* --- newsletter signup ---------------------------------------------------- */
+
+.substack__alt {
+  margin: 16px 0 0;
+  font-size: 0.85rem;
+  color: var(--bone-dim);
+}
