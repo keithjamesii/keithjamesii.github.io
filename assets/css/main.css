@@ -346,3 +346,19 @@ input:focus, textarea:focus { outline: none; border-color: var(--brass); }
   font-size: 0.85rem;
   color: var(--bone-dim);
 }
+
+
+/* --- fellowship band ------------------------------------------------------ */
+
+.fellow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 268px); gap: 52px; align-items: start; }
+@media (max-width: 860px) { .fellow { grid-template-columns: 1fr; gap: 36px; } .fellow .cover { max-width: 280px; } }
+.fellow h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.fellow .eyebrow { font-feature-settings: "tnum"; }
+.fellow__cite {
+  font-style: italic; color: var(--bone-dim); font-size: 1.02rem;
+  border-top: 1px solid var(--rule); padding-top: 1.15em; margin: 1.6em 0 0;
+}
+.fellow__cite span {
+  display: block; margin-top: 14px; font-family: var(--mono); font-style: normal;
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bone-dim);
+}
