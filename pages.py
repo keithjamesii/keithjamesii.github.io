@@ -36,9 +36,49 @@ COVER = ('<div class="cover"><img src="{p}assets/img/cover.jpg" width="1400" hei
          'alt="Cover of Kinesthoria: The Weight of Wheels &mdash; a rider on a cargo bicycle '
          'crossing a dust plain past a beached ship"></div>')
 
+CATALOG = "https://myemail.constantcontact.com/2026-Artist-Fellowship-Catalog-Now-Available-from-NJ-State-Council-on-the-Arts.html?soid=1117482190155&aid=GW-Lriyb1xM"
+
+FELLOWSHIP = """
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="fellow">
+      <div>
+        <p class="eyebrow">2026 &middot; New Jersey State Council on the Arts</p>
+        <h2>Individual Artist Fellow in Prose</h2>
+        <hr class="rule-brass">
+        <p class="lede">In 2026, James K Martin II &mdash; writing as Keith James II &mdash; was
+          awarded an Individual Artist Fellowship in Prose by the New Jersey State Council on the
+          Arts, one of 99 fellows across six disciplines named in the Council&rsquo;s 2026
+          cohort.</p>
+        <p>&ldquo;The fellowship buys time. Time to be creative, time to be with my family, and
+          time to continue building the world of the One Land.&rdquo;</p>
+        <p class="fellow__cite">His writing draws on the overlap between scientific inquiry and
+          lived experience, exploring how close observation of the natural world, whether at the
+          molecular level or in the backyard apiary, reshapes our understanding of ourselves.
+          <span>Artist Fellowship Catalog 2026, p.&nbsp;46</span></p>
+        <div class="btn-row">
+          <a class="btn btn--solid" href="{catalog}">Read the catalog</a>
+          <a class="btn btn--ghost" href="https://artscouncil.nj.gov">About the Council</a>
+        </div>
+      </div>
+      <div>
+        <div class="cover"><img src="{p}assets/img/fellowship-portrait.jpg" width="686" height="711"
+             alt="James K Martin II, 2026 Individual Artist Fellow in Prose"></div>
+        <ul class="meta">
+          <li><span>Discipline</span><span>Prose</span></li>
+          <li><span>Cohort</span><span>2026</span></li>
+          <li><span>Administered by</span><span>Mid Atlantic Arts</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+
 # ---------------------------------------------------------------- home ------
 
 HOME = """
+""" + FELLOWSHIP + """
 <section class="hero">
   {spokes}
   <div class="wrap">
@@ -296,18 +336,26 @@ ABOUT = """
           <li><span>Writes as</span><span>Keith James II</span></li>
           <li><span>Also</span><span>James K. Martin II, PhD</span></li>
           <li><span>Based in</span><span>Delaware</span></li>
+          <li><span>Fellowship</span><span>NJSCA, Prose, 2026</span></li>
         </ul>
       </div>
       <div>
         <p class="eyebrow">About</p>
         <h1 style="font-size:clamp(2.1rem,5vw,3rem)">Keith James II</h1>
         <hr class="rule-brass">
-        <p class="lede">Keith James II is the pen name of James K. Martin II. He trained as a
+        <p class="lede">Keith James II is the pen name of James K. Martin II, a 2026 Individual
+          Artist Fellow in Prose of the New Jersey State Council on the Arts. He trained as a
           molecular biologist and spent years on how cells survive stress. Then he wrote a novel
           about people who haul cargo with their bodies, because nothing else in their world is
           left to do it.</p>
         <p>Kinesthoria: The Weight of Wheels is his first novel of the One Land. He is adapting it
           into an illustrated edition now.</p>
+        <blockquote class="pullquote" style="margin-top:2em">His writing draws on the overlap
+          between scientific inquiry and lived experience, exploring how close observation of the
+          natural world, whether at the molecular level or in the backyard apiary, reshapes our
+          understanding of ourselves.
+          <cite>Artist Fellowship Catalog 2026</cite>
+        </blockquote>
       </div>
     </div>
   </div>
@@ -407,19 +455,22 @@ NEWS = """
     <hr class="rule-brass" style="margin-bottom:44px">
     <ul class="entries">
       <li>
-        <time datetime="2026">2026</time>
+        <time datetime="2026-09">Sept 2026</time>
         <div>
-          <h3>Kinesthoria is available in three editions</h3>
-          <p>The Weight of Wheels is out in hardcover, paperback, and Kindle.
-            <a href="{amazon}">Read it here.</a></p>
+          <h3>Kinesthoria is out, and the Fellowship Catalog is published</h3>
+          <p>The Weight of Wheels is available in hardcover, paperback, and Kindle.
+            <a href="{amazon}">Read it here.</a> The same month, the Council published its 2026
+            Artist Fellowship Catalog, with entries for all 99 fellows; the prose section begins
+            on page 40. <a href="{catalog}">Read the catalog.</a></p>
         </div>
       </li>
       <li>
-        <time datetime="2026">2026</time>
+        <time datetime="2026-02">Feb 2026</time>
         <div>
-          <h3>Fellowship in Prose</h3>
-          <p>Named a 2026 Individual Artist Fellow in Prose by the New Jersey State Council on
-            the Arts.</p>
+          <h3>Individual Artist Fellowship in Prose</h3>
+          <p>One of 99 artists awarded a 2026 Individual Artist Fellowship by the New Jersey State
+            Council on the Arts, from a program investing $2 million directly in New Jersey
+            artists.</p>
         </div>
       </li>
       <li>
@@ -476,6 +527,10 @@ CONTACT = CONTACT.replace("EMAIL_HERE", EMAIL)
 
 _D = ("Kinesthoria: The Weight of Wheels by Keith James II. A century after the Great Convergence, "
       "the settlements of the One Land move on muscle, wind and hand-brazed steel.")
+
+HOME        = HOME.replace("{catalog}", CATALOG)
+ABOUT       = ABOUT.replace("{catalog}", CATALOG)
+NEWS        = NEWS.replace("{catalog}", CATALOG)
 
 PAGES = [
     ("",            "Keith James II &mdash; Kinesthoria: The Weight of Wheels", _D, HOME, "website"),
